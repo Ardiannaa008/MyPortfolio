@@ -1,0 +1,181 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+    body {  }
+    a { text-decoration: none; color: inherit; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9; 
+      font-family: 'Inter', sans-serif;
+      color: #111; 
+      scroll-behavior: smooth;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+      border-bottom: 1px solid white; 
+      padding: 20px 40px;
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      box-shadow: none;
+      z-index: 1000;
+    }
+    header nav a { 
+      color: #222;
+      margin-left: 20px;
+      font-weight: 600;
+      transition: color 0.3s;
+     }
+    header nav a:hover { color: #6C63FF; }
+
+  
+
+    .hero {
+       height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: left; 
+      background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+      color: #111;
+      padding: 0 40px;
+      gap:5px; 
+      flex-wrap: wrap;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 600; /* not as bold */
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #444; /* softer gray text */
+    }
+
+    .hero button {
+      background: #6C63FF;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      margin-top: 10px;
+      border-radius: 25px; /* pill-shaped */
+      font-weight: 500;
+      box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
+      transition: all 0.3s ease;
+    
+    }
+
+    .hero button:hover {
+      transform: translateY(-2px);
+      background: #5046c8;
+    }
+
+    .hero-text {
+      max-width: 500px;
+      flex: 1;
+    }
+    .hero-img {
+     
+      max-width: 500px;
+    }
+
+    @media (max-width: 1024px) {
+  .hero {
+    padding: 40px 20px;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* stack text + image */
+    height: auto;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .hero-img {
+    max-width: 300px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero button {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+    /* About Section */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 20px;
+      gap: 40px;
+    }
+    .about img { width: 200px; border-radius: 50%; }
+    .about-text { max-width: 600px; }
+    .skills { margin-top: 20px; }
+    .skills span { display: inline-block; background: #6C63FF; color: white; padding: 6px 12px; margin: 5px; border-radius: 6px; font-size: 0.9rem; }
+
+    /* Projects Section */
+    .projects { padding: 80px 20px; text-align: center; }
+    .projects h2 { margin-bottom: 50px; font-size: 2.5rem; }
+    .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+    .project-card {
+      background: white; border-radius: 15px; overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s;
+    }
+    .project-card:hover { transform: translateY(-10px); }
+    .project-card img { width: 100%; display: block; }
+    .project-card .content { padding: 20px; text-align: left; }
+    .project-card h3 { margin-bottom: 10px; }
+    .project-card p { font-size: 0.95rem; margin-bottom: 10px; }
+    .project-card .tech { font-size: 0.85rem; color: #666; margin-bottom: 10px; }
+    .project-card .buttons a {
+      display: inline-block; margin-right: 10px; padding: 6px 12px; border-radius: 6px;
+      font-weight: 600; color: white; background: #6C63FF; transition: background 0.3s;
+    }
+    .project-card .buttons a:hover { background: #5046c8; }
+
+    /* Contact Section */
+    .contact { padding: 80px 20px; text-align: center; background: #f0f0f0; }
+    .contact h2 { margin-bottom: 40px; font-size: 2.5rem; }
+    .contact p { margin-bottom: 10px; font-size: 1.1rem; }
+    .contact-icons a { margin: 0 10px; font-size: 1.5rem; color: #6C63FF; transition: transform 0.3s; }
+    .contact-icons a:hover { transform: scale(1.3); }
+
+    /* Footer */
+    footer { text-align: center; padding: 20px; font-size: 0.9rem; color: #888; }
+
+    @media(max-width:768px){ .hero h1{font-size:2.5rem;} }

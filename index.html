@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ardiana Portfolio</title>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+   
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero" data-aos="fade-down">
+    <div class="hero-text">
+      <h1>Hi, I'm Ardiana</h1>
+      <p>💻Frontend Developer with a touch of Backend</p>
+      <button onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View My Work</button>
+    </div>
+    <img src="1-removebg-preview.png" alt="Ardiana" class="hero-img">
+  </section>
+
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    
+    <div class="about-text" data-aos="fade-right">
+      <h2>About Me</h2>
+      <p>
+        I'm a web developer passionate about building clean, responsive, and user-friendly websites. 
+        My main stack includes <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>, and I'm currently learning <strong>React</strong> to enhance my frontend skills.  
+      </p>
+      <p>
+        I also have experience working with <strong>MongoDB</strong> and <strong>server-side development</strong>, which I applied in projects like <em>MSPortfolio</em>, where I built both the frontend and backend to handle student data securely.
+      </p>
+      <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>GitHub</span>
+        <span>MongoDB</span>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <h2 data-aos="fade-up">My Projects</h2>
+    <div class="project-grid">
+      <!-- Project Card Example -->
+      <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+        <img src="screencapture-ardiannaa008-github-io-Planwyn-2025-08-19-22_07_12.png" alt="Planwyn">
+        <div class="content">
+          <h3>Planwyn</h3>
+          <p>Productivity planner website with modern UI and responsive design.</p>
+          <div class="tech">HTML, CSS, JavaScript</div>
+          <div class="buttons">
+            <a href="https://ardiannaa008.github.io/Planwyn/">Live Demo</a>
+            <a href="https://github.com/Ardiannaa008/Planwyn">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+        <img src="screencapture-m-student-portfolio-vercel-app-2025-08-19-22_12_13.png" alt="MSPortfolio">
+        <div class="content">
+          <h3>MSPortfolio</h3>
+          <p>Platform to showcase student portfolios with clean design.</p>
+          <div class="tech">HTML, CSS, JavaScript, MongoDB, REST API</div>
+          <div class="buttons">
+            <a href="https://m-student-portfolio.vercel.app/">Live Demo</a>
+            <a href="https://github.com/Ardiannaa008/M-StudentPortfolio">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+        <img src="screencapture-ardiannaa008-github-io-Unigerma-2025-08-19-22_14_02.png" alt="Unigerma">
+        <div class="content">
+          <h3>Unigerma</h3>
+          <p>German language course business website with modern landing page.</p>
+          <div class="tech">HTML, CSS, JavaScript</div>
+          <div class="buttons">
+            <a href="https://ardiannaa008.github.io/Unigerma/">Live Demo</a>
+            <a href="https://github.com/Ardiannaa008/Unigerma?tab=readme-ov-file">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+        <img src="screencapture-ardiannaa008-github-io-Gym-2025-08-19-22_21_25.png" alt="MagicHandsStudio">
+        <div class="content">
+          <h3>GymWebsite</h3>
+          <p>Creative design studio website with interactive portfolio.</p>
+          <div class="tech">HTML, CSS, JavaScript</div>
+          <div class="buttons">
+            <a href="https://ardiannaa008.github.io/Gym/">Live Demo</a>
+            <a href="https://github.com/Ardiannaa008/Gym">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <p>Email: ardiana.ajdari003@email.com</p>
+    <div class="contact-icons">
+      <a href="https://github.com/Ardiannaa008" target="_blank">GitHub</a>
+      <a href="#" target="_blank">LinkedIn</a>
+      <a href="https://www.instagram.com/ardianaajdarii/" target="_blank">Instagram</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Ardiana | Web Developer
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true, // Animation only happens once
+    });
+
+
+  </script>
+</body>
+</html>
