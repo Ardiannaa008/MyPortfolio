@@ -11,16 +11,141 @@ body {
 .text-purple { color: #9B8CFF !important; }
 .highlight { color: #6C63FF; text-shadow: 0 0 10px #6C63FF; }
 
-/* NAVBAR */
-.navbar-nav .nav-link {
+/* ───────────────────────────────
+   Dark Neon Developer Navbar
+─────────────────────────────── */
+/* ─────────────────────────────
+  Dark Neon Navbar for your HTML
+  Matches: <header><nav><a href=...>
+───────────────────────────── */
+
+:root{
+  --nav-bg: rgba(5,7,15,0.75);
+  --nav-bg-solid: rgba(5,7,15,0.98);
+  --accent-blue: #3E8BFF;
+  --accent-purple: #6C63FF;
+  --text-light: #E6E9FF;
+  --border-neon: rgba(108,99,255,0.16);
+  --shadow-neon: 0 0 20px rgba(108,99,255,0.18);
+  --glass: blur(8px);
+  --transition: 0.28s ease;
+}
+
+/* Header wrapper (matches your HTML) */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--nav-bg);
+  backdrop-filter: var(--glass);
+  -webkit-backdrop-filter: var(--glass);
+  border-bottom: 1px solid var(--border-neon);
+  transition: background var(--transition), height var(--transition), box-shadow var(--transition), padding var(--transition);
+  padding: 18px 40px;
+  display: flex;
+  justify-content: center; /* keeps your centered nav */
+  align-items: center;
+}
+
+/* If you decide to add a scrolled class via JS later, this is ready */
+header.scrolled {
+  background: var(--nav-bg-solid);
+  box-shadow: var(--shadow-neon);
+  padding: 10px 28px;
+}
+
+/* nav container inside header */
+header nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap; /* wraps on small screens */
+}
+
+/* Links (your plain <a> elements) */
+header nav a {
+  color: var(--text-light);
   font-weight: 600;
-  margin-left: 20px;
-  color: #d9d9d9 !important;
+  margin-left: 12px;
+  padding: 6px 4px;
+  position: relative;
+  transition: color var(--transition), transform var(--transition);
+  display: inline-block;
+  letter-spacing: 0.2px;
 }
-.navbar-nav .nav-link:hover {
-  color: #6C63FF !important;
-  text-shadow: 0 0 10px #6C63FF;
+
+/* Hover color + glow */
+header nav a:hover,
+header nav a:focus {
+  color: var(--accent-purple);
+  transform: translateY(-2px);
+  text-shadow: 0 0 10px rgba(108,99,255,0.28);
+  outline: none;
 }
+
+/* Underline animation that grows from center */
+header nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+  transform: translateX(-50%);
+  transition: width 0.32s cubic-bezier(.2,.9,.2,1);
+  border-radius: 2px;
+}
+
+/* active or hovered state */
+header nav a:hover::after,
+header nav a:focus::after,
+header nav a.active::after {
+  width: 70%;
+}
+
+/* small-screen friendly */
+@media (max-width: 900px) {
+  header {
+    padding: 12px 18px;
+  }
+  header nav {
+    gap: 10px;
+  }
+  header nav a {
+    margin-left: 8px;
+    font-size: 0.95rem;
+    padding: 8px 6px;
+  }
+  header nav a::after { bottom: -4px; height: 2px; }
+}
+
+/* very small screens: stack links and center */
+@media (max-width: 520px) {
+  header {
+    padding: 10px;
+  }
+  header nav {
+    width: 100%;
+    justify-content: center;
+  }
+  header nav a {
+    margin: 6px 8px;
+  }
+}
+
+/* Optional: small glowing brand text if you add a .logo element */
+header .logo {
+  margin-right: 20px;
+  color: var(--accent-purple);
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(108,99,255,0.22);
+}
+
+
+
+
 
 /* HERO */
 .hero {
