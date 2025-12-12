@@ -5,68 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ardiana Portfolio</title>
 
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
- 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap Dark -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header>
-   
+  <!-- Navbar -->
+  <header class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-purple" href="#hero">Ardiana</a>
 
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero" id="hero" data-aos="fade-down">
     <div class="hero-text">
-      <h1>Hi, I'm Ardiana</h1>
-      <p>💻Frontend Developer with a touch of Backend</p>
-      <button onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View My Work</button>
+      <h1>Hi, I'm <span class="highlight">Ardiana</span></h1>
+      <p>💻 Frontend Developer with a touch of Backend</p>
+      <button class="btn-main" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+        View My Work
+      </button>
     </div>
     <img src="images/1-removebg-preview.png" alt="Ardiana" class="hero-img">
   </section>
 
-
-  <!-- About Section -->
+  <!-- About -->
   <section class="about" id="about">
-    
     <div class="about-text" data-aos="fade-right">
-      <h2>About Me</h2>
+      <h2 class="section-title">About Me</h2>
       <p>
-        I'm a web developer passionate about building clean, responsive, and user-friendly websites. 
-        My main stack includes <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>, and I'm currently learning <strong>React</strong> to enhance my frontend skills.  
+        I'm a web developer passionate about building clean, responsive, and user-friendly websites.
+        My main stack includes <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>,
+        and I'm currently learning <strong>React</strong>.
       </p>
       <p>
-        I also have experience working with <strong>MongoDB</strong> and <strong>server-side development</strong>, which I applied in projects like <em>MSPortfolio</em>, where I built both the frontend and backend to handle student data securely.
+        I also work with <strong>MongoDB</strong> and backend development, used in my project
+        <em>MSPortfolio</em> where I built a secure student platform.
       </p>
-      <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>React</span>
-        <span>GitHub</span>
-        <span>MongoDB</span>
 
+      <div class="skills">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        <span>React</span><span>GitHub</span><span>MongoDB</span>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects -->
   <section class="projects" id="projects">
-    <h2 data-aos="fade-up">My Projects</h2>
+    <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+
     <div class="project-grid">
-      <!-- Project Card Example -->
+      <!-- Project cards stay the same -->
       <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-        <img src="images/screencapture-ardiannaa008-github-io-Planwyn-2025-08-19-22_07_12.png" alt="Planwyn">
+        <img src="images/screencapture-ardiannaa008-github-io-Planwyn-2025-08-19-22_07_12.png">
         <div class="content">
           <h3>Planwyn</h3>
           <p>Productivity planner website with modern UI and responsive design.</p>
@@ -79,11 +92,11 @@
       </div>
 
       <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-        <img src="images/screencapture-m-student-portfolio-vercel-app-2025-08-26-19_56_24.png" alt="MSPortfolio">
+        <img src="images/screencapture-m-student-portfolio-vercel-app-2025-08-26-19_56_24.png">
         <div class="content">
           <h3>MSPortfolio</h3>
           <p>Platform to showcase student portfolios with clean design.</p>
-          <div class="tech">HTML, CSS, JavaScript, MongoDB, REST API</div>
+          <div class="tech">HTML, CSS, JavaScript, MongoDB</div>
           <div class="buttons">
             <a href="https://m-student-portfolio.vercel.app/">Live Demo</a>
             <a href="https://github.com/Ardiannaa008/M-StudentPortfolio">GitHub</a>
@@ -92,10 +105,10 @@
       </div>
 
       <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-        <img src="images/screencapture-ardiannaa008-github-io-Unigerma-2025-08-19-22_14_02.png" alt="Unigerma">
+        <img src="images/screencapture-ardiannaa008-github-io-Unigerma-2025-08-19-22_14_02.png">
         <div class="content">
           <h3>Unigerma</h3>
-          <p>German language course business website with modern landing page.</p>
+          <p>German language course business website.</p>
           <div class="tech">HTML, CSS, JavaScript</div>
           <div class="buttons">
             <a href="https://ardiannaa008.github.io/Unigerma/">Live Demo</a>
@@ -105,10 +118,10 @@
       </div>
 
       <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-        <img src="images/screencapture-ardiannaa008-github-io-Gym-2025-08-19-22_21_25.png" alt="MagicHandsStudio">
+        <img src="images/screencapture-ardiannaa008-github-io-Gym-2025-08-19-22_21_25.png">
         <div class="content">
           <h3>GymWebsite</h3>
-          <p>Creative design studio website with interactive portfolio.</p>
+          <p>Creative gym website with interactive UI.</p>
           <div class="tech">HTML, CSS, JavaScript</div>
           <div class="buttons">
             <a href="https://ardiannaa008.github.io/Gym/">Live Demo</a>
@@ -116,18 +129,18 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section class="contact" id="contact" data-aos="fade-up">
-    <h2>Contact Me</h2>
-    <p>Email: ardiana.ajdari003@email.com</p>
+    <h2 class="section-title">Contact Me</h2>
+    <p>Email: <span class="highlight">ardiana.ajdari003@email.com</span></p>
+
     <div class="contact-icons">
-      <a href="https://github.com/Ardiannaa008" target="_blank">GitHub</a>
-      <a href="#" target="_blank">LinkedIn</a>
-      <a href="https://www.instagram.com/ardianaajdarii/" target="_blank">Instagram</a>
+      <a href="https://github.com/Ardiannaa008">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="https://www.instagram.com/ardianaajdarii/">Instagram</a>
     </div>
   </section>
 
@@ -136,15 +149,12 @@
     © 2025 Ardiana | Web Developer
   </footer>
 
-  <!-- AOS JS -->
+  <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true, 
-    });
+  <script>AOS.init({ duration: 1000, once: true });</script>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  </script>
 </body>
 </html>
